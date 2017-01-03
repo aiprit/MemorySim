@@ -1,25 +1,23 @@
+#Memory Simulation
 Name: Parit Burintrathikul
-CS 250 HW 5 
-Netid: pb111
+CS 250 Memory Simulation
 
-Talked with Justin Wang
-NOTE switch between the file in main for eclipse and teer usage
-cacheism is the main for load and store
-main memory is my memorysim
-block is a block class
-hex to bi has the calculations
-the file input has an no automatic .txt added so if the file has a .txt or something add appropriate endings
+Java Implementation of Cache Simulation
 
-Testcase1:
+The file input has an no automatic .txt added so if the file has a .txt or something add appropriate endings
+The simulation is done through the Cacheism.java file
+
+
+Test case 1:
 args: test2.txt 1024 4 32
 store 0x1a25bb 4 c77eaabb
 load 0x1a25bb 4
 load 0x1a25bb 4
 
-output
-store 0x1a25bb miss 
-load 0x1a25bb miss c77eaabb 
-load 0x1a25bb hit c77eaabb 
+Output:
+store 0x1a25bb miss
+load 0x1a25bb miss c77eaabb
+load 0x1a25bb hit c77eaabb
 
 TEST2:
 args: test2.txt 1 512 2
@@ -29,28 +27,30 @@ load 0x0 1
 load 0x0 1
 load 0x1a25bb 1
 
-store 0x1a25bb miss 
-store 0x0 miss 
-load 0x0 miss 12 
-load 0x0 hit 12 
-load 0x1a25bb miss c7 
+Output:
+store 0x1a25bb miss
+store 0x0 miss
+load 0x0 miss 12
+load 0x0 hit 12
+load 0x1a25bb miss c7
 
 
-Test3:
+Test case 3:
 args: test2.txt 1024 4 32
 store 0x1a25bb 1 c77e
-load 0x1a25bb 1 
+load 0x1a25bb 1
 store 0x1a25bb 1 45
-load 0x1a25bb 1 
+load 0x1a25bb 1
 
-store 0x1a25bb miss 
-load 0x1a25bb miss c7 
-store 0x1a25bb hit  
-load 0x1a25bb hit 45 
+Output:
+store 0x1a25bb miss
+load 0x1a25bb miss c7
+store 0x1a25bb hit
+load 0x1a25bb hit 45
 
 
 
-Test case4 :
+Test case 4:
 
 rgs: tracefile.txt 1024 4 32
 store 0x1a25bb 4 c77eaabb
@@ -59,12 +59,12 @@ store 0xC225A0 4 12345678
 load 0x1a25bb 4
 load 0xFA25A0 4
 load 0xFA25A0 4
-load 0xC225A0 4 
+load 0xC225A0 4
 load 0x1a25bb 4
-load 0xC225A0 4 
+load 0xC225A0 4
 load 0xFA25A0 4
 
-output
+Output:
 store 0x1a25bb miss
 store 0xFA25A0 miss
 store 0xC225A0 miss
